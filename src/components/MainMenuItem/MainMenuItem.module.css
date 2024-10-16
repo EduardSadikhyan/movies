@@ -1,0 +1,41 @@
+
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+   color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.icon {
+  margin-right: 30px;
+}
+
+.menuItem:first-child .icon {
+  margin-right: 25px;
+}
+
+.itemName {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  color: white;
+  max-width: 150px; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menuItem.expanded:hover {
+  background-color: rgba(59, 72, 109, 0.8); 
+  border-radius: 10px; 
+  padding: 15px 20px;
+}

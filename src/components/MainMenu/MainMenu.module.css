@@ -1,0 +1,57 @@
+.mainMenu {
+  width: 160px;
+  height: 100vh;
+  background-color: #040404;
+  transition: width 0.3s ease-in-out, background 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+}
+
+.mainMenu:hover {
+  width: 312px;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+}
+
+.profilePic {
+  width: 82px;
+  height: 82px;
+}
+
+.profileName {
+  font-weight: bold;
+}
+
+.bottomMenu p {
+  margin: 10px 0;
+  white-space: nowrap;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.bottomMenu p:hover {
+  text-decoration: underline;
+}
+
+.profileInfo,
+.bottomMenu {
+  opacity: 0;
+  padding: 20px;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.mainMenu:hover .profileInfo,
+.mainMenu:hover .bottomMenu {
+  opacity: 1;
+  visibility: visible;
+}
