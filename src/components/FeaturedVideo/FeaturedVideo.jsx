@@ -7,7 +7,7 @@ export const FeaturedVideo = ({ videoData }) => {
         <div
           className={styles.coverImage}
           style={{
-            backgroundImage: `url(/src/assets/images/${videoData?.CoverImage})`,
+            backgroundImage: `url(/assets/images/${videoData?.CoverImage})`,
             backgroundSize: videoData.Title !== "The Irishman" && "contain",
             backgroundPosition: videoData.Title !== "The Irishman" && "center",
           }}
@@ -15,13 +15,13 @@ export const FeaturedVideo = ({ videoData }) => {
           <div className={styles.videoInfo}>
             <p className={styles.category}>{videoData.Category}</p>
             <img
-              src={`/src/assets/images/${videoData?.TitleImage}`}
+              src={`/assets/images/${videoData?.TitleImage}`}
               alt={videoData.Title}
               className={styles.titleImage}
             />
             <p className={styles.movieDetails}>
               {videoData.ReleaseYear} | {videoData.MpaRating} |{" "}
-              {Math.floor(videoData.Duration / 3600)}h{" "}
+              { Math.floor(videoData.Duration / 3600)}h{" "}
               {Math.floor((videoData.Duration % 3600) / 60)}m
             </p>
             <p className={styles.description}>{videoData.Description}</p>

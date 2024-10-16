@@ -1,25 +1,20 @@
 import { useState } from "react";
 
-import {
-  searchIcon,
-  homeIcon,
-  tvIcon,
-  movieIcon,
-  genreIcon,
-  watchLaterIcon,
-  profileImage,
-} from "../../assets";
 import { MainMenuItem } from "../MainMenuItem/MainMenuItem";
 
 import styles from "./MainMenu.module.css";
 
 const menuItems = [
-  { src: searchIcon, name: "Search", alt: "Search" },
-  { src: homeIcon, name: "Home", alt: "Home" },
-  { src: tvIcon, name: "TV Shows", alt: "TV Shows" },
-  { src: movieIcon, name: "Movies", alt: "Movies" },
-  { src: genreIcon, name: "Genres", alt: "Genres" },
-  { src: watchLaterIcon, name: "Watch Later", alt: "Watch Later" },
+  { src: "/assets/icons/search-icon.png", name: "Search", alt: "Search" },
+  { src: "/assets/icons/home-icon.png", name: "Home", alt: "Home" },
+  { src: "/assets/icons/tv-icon.png", name: "TV Shows", alt: "TV Shows" },
+  { src: "/assets/icons/movie-icon.png", name: "Movies", alt: "Movies" },
+  { src: "/assets/icons/genre-icon.png", name: "Genres", alt: "Genres" },
+  {
+    src: "/assets/icons/watch-later-icon.png",
+    name: "Watch Later",
+    alt: "Watch Later",
+  },
 ];
 
 export const MainMenu = () => {
@@ -32,7 +27,11 @@ export const MainMenu = () => {
       onMouseLeave={() => setIsExpanded(false)}
     >
       <div className={styles.profileInfo}>
-        <img src={profileImage} alt="Profile" className={styles.profilePic} />
+        <img
+          src="/assets/images/profile.png"
+          alt="Profile"
+          className={styles.profilePic}
+        />
         <p className={styles.profileName}>Daniel</p>
       </div>
       <ul className={styles.menuList}>

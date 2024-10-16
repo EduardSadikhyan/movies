@@ -11,7 +11,7 @@ export const TrendingNow = ({ movies, onMovieSelect }) => {
         {movies.map((movie) => (
           <SwiperSlide key={movie.Id} onClick={() => onMovieSelect(movie)}>
             <img
-              src={`/src/assets/images/${movie.CoverImage}`}
+              src={`/assets/images/${movie.CoverImage}`}
               alt={movie.Title}
               className={styles.videoImage}
             />
